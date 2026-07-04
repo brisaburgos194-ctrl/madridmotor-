@@ -1,0 +1,6 @@
+{
+  "name": "Madrid Motor Mantenimiento",
+  "description": "Landing page de alta conversión para servicios de mantenimiento especializado de maquinaria pesada.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
