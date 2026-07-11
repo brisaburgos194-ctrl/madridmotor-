@@ -10,7 +10,7 @@ import {
   CheckCircle2, ArrowRight, Phone, Mail, Building2, ChevronRight, 
   Award, DollarSign, Users, BarChart3, HelpCircle, Briefcase, 
   Settings, ClipboardList, Check, Star, Play, ThumbsUp, Activity,
-  PhoneCall, Sparkles, MessageSquare, AlertCircle, UserCheck
+  PhoneCall, Sparkles, MessageSquare, AlertCircle, UserCheck, MessageCircle
 } from 'lucide-react';
 import LeadForm from './components/LeadForm';
 import LeadDashboard from './components/LeadDashboard';
@@ -21,7 +21,7 @@ const TESTIMONIALS: TestimonialItem[] = [
   {
     id: 't1',
     quote: 'Llevábamos dos años con un problema hidráulico intermitente en una de nuestras excavadoras que tres talleres diferentes no habían podido resolver de forma definitiva. El equipo de Madrid Motor hizo el diagnóstico correcto en la primera visita, nos explicó exactamente qué estaba pasando y por qué los parches anteriores no funcionaban. Desde esa intervención, el equipo lleva 11 meses operando sin incidentes. No sé qué nos costó más: lo que pagamos a Madrid Motor o todo lo que gastamos antes sin resultado.',
-    author: 'Carlos M.',
+    author: 'Jofre Sánchez',
     role: 'Gerente de Operaciones, empresa de movimiento de tierras',
     fleetSize: '23 equipos en flota'
   },
@@ -35,7 +35,7 @@ const TESTIMONIALS: TestimonialItem[] = [
   {
     id: 't3',
     quote: 'Firmamos un contrato de mantenimiento programado para nuestra flota de 8 motoconformadoras y el cambio ha sido notable. En el primer año, redujimos las paradas no programadas en más de un 70%. El costo total de mantenimiento bajó respecto al año anterior, incluso con el contrato. Y lo que no se mide fácilmente pero se siente: ya no vivo con el teléfono en la mano esperando que me llamen con una mala noticia.',
-    author: 'Jorge H.',
+    author: 'Nelson Delgado',
     role: 'Propietario, empresa de obras viales',
     fleetSize: '8 motoconformadoras'
   },
@@ -98,9 +98,14 @@ export default function App() {
       {/* Floating Header */}
       <header className="sticky top-0 z-40 bg-slate-950/80 backdrop-blur-md border-b border-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <div className="p-2 bg-indigo-500 rounded-lg text-white shadow-md shadow-indigo-500/10">
-              <Wrench className="w-6 h-6 stroke-[2.5]" />
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-full overflow-hidden border border-slate-850 shadow-lg shadow-indigo-550/10 bg-slate-900 flex items-center justify-center shrink-0">
+              <img 
+                src="/src/assets/images/madrid_motor_logo_1783780227291.jpg" 
+                alt="Madrid Motor" 
+                className="w-full h-full object-cover scale-105"
+                referrerPolicy="no-referrer"
+              />
             </div>
             <div>
               <span className="font-extrabold text-lg sm:text-xl tracking-wider text-white">MADRID<span className="text-indigo-400"> MOTOR</span></span>
@@ -1124,6 +1129,65 @@ export default function App() {
         </div>
       </section>
 
+      {/* SECTION 13.5: Nuestras Instalaciones - Taller de Servicio Pesado */}
+      <section id="instalaciones" className="py-20 md:py-28 bg-slate-950 text-white border-t border-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left Copy: Info about the facilities */}
+            <div className="lg:col-span-6 space-y-6">
+              <span className="text-xs font-black text-indigo-400 uppercase tracking-widest">Base de Operaciones</span>
+              <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight leading-[1.1]">
+                Nuestras Instalaciones de <span className="text-indigo-400">Servicio Pesado</span>
+              </h2>
+              <div className="h-1.5 w-24 bg-indigo-500" />
+              
+              <div className="space-y-4 text-sm sm:text-base text-slate-400 leading-relaxed font-medium">
+                <p className="font-bold text-slate-200 text-base sm:text-lg">
+                  Contamos con un taller especializado y equipado estratégicamente para la recepción, diagnóstico e intervención integral de maquinaria de gran tonelaje.
+                </p>
+                <p>
+                  Ubicados estratégicamente en la <span className="text-white font-semibold">Vía Atahualpa pasando el GAD Municipal</span>, nuestras instalaciones cuentan con la infraestructura física y de seguridad requerida para albergar excavadoras, rodillos, cargadores frontales y equipos viales.
+                </p>
+                <p>
+                  Disponemos de zonas techadas de alta capacidad, áreas específicas para diagnósticos hidráulicos y electrónicos, y todo el herramental especializado necesario para intervenciones preventivas y correctivas seguras y eficientes.
+                </p>
+              </div>
+              
+              <div className="pt-4 flex flex-wrap gap-4">
+                <div className="flex items-center gap-2 bg-slate-900 border border-slate-850 px-4 py-2 rounded-xl text-xs font-bold text-slate-300">
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block animate-pulse" />
+                  Zona Techada de Gran Capacidad
+                </div>
+                <div className="flex items-center gap-2 bg-slate-900 border border-slate-850 px-4 py-2 rounded-xl text-xs font-bold text-slate-300">
+                  <span className="w-2.5 h-2.5 rounded-full bg-indigo-500 inline-block" />
+                  Ubicación Estratégica
+                </div>
+              </div>
+            </div>
+
+            {/* Right Photo: The generated high-quality facility image */}
+            <div className="lg:col-span-6 relative">
+              <div className="absolute inset-0 bg-indigo-500/10 rounded-2xl filter blur-xl opacity-20" />
+              <div className="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-900 group">
+                <img 
+                  src="/src/assets/images/real_workshop_photo_1783779791534.jpg" 
+                  alt="Instalaciones de Taller y Servicio Técnico de Maquinaria Pesada" 
+                  className="w-full h-auto object-cover aspect-[16/9] lg:aspect-[4/3] group-hover:scale-105 transition-transform duration-700"
+                  referrerPolicy="no-referrer"
+                />
+                
+                <div className="p-4 bg-slate-900 border-t border-slate-850 text-center">
+                  <p className="text-xs font-black text-slate-200 uppercase tracking-widest">Taller de Servicio Madrid Motor</p>
+                  <p className="text-[10px] text-slate-500 font-medium">Vía Atahualpa pasando el GAD Municipal</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* SECTION 14: Preguntas Frecuentes (Interactive Accordion - Light theme / White Background) */}
       <section id="faq" className="py-20 md:py-28 bg-white text-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1180,8 +1244,8 @@ export default function App() {
               <div className="pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
                   <span className="text-[10px] text-slate-500 uppercase font-bold block">Contacto WhatsApp Comercial</span>
-                  <a href="https://wa.me/51987654321" target="_blank" rel="noreferrer" className="text-sm font-extrabold text-indigo-400 hover:text-indigo-300 hover:underline flex items-center gap-1.5 mt-1">
-                    <MessageSquare className="w-4 h-4 text-indigo-400" /> +51 987 654 321
+                  <a href="https://wa.me/593990483273" target="_blank" rel="noreferrer" className="text-sm font-extrabold text-indigo-400 hover:text-indigo-300 hover:underline flex items-center gap-1.5 mt-1">
+                    <MessageSquare className="w-4 h-4 text-indigo-400" /> 0990483273
                   </a>
                 </div>
                 <div>
@@ -1210,9 +1274,14 @@ export default function App() {
       <footer className="bg-slate-950 border-t border-slate-900 text-slate-500 py-12 text-center text-xs font-medium font-sans">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           
-          <div className="flex items-center justify-center gap-2.5">
-            <div className="p-1.5 bg-indigo-600 rounded text-white">
-              <Wrench className="w-5 h-5 stroke-[2.5]" />
+          <div className="flex items-center justify-center gap-3">
+            <div className="w-10 h-10 rounded-full overflow-hidden border border-slate-800 bg-slate-900 flex items-center justify-center shrink-0 shadow-md">
+              <img 
+                src="/src/assets/images/madrid_motor_logo_1783780227291.jpg" 
+                alt="Madrid Motor Logo" 
+                className="w-full h-full object-cover scale-105"
+                referrerPolicy="no-referrer"
+              />
             </div>
             <span className="font-extrabold text-sm tracking-widest text-white">MADRID<span className="text-indigo-400"> MOTOR</span> Mantenimiento</span>
           </div>
@@ -1232,6 +1301,24 @@ export default function App() {
           
         </div>
       </footer>
+
+      {/* Botón flotante de WhatsApp */}
+      <a
+        href="https://wa.me/593990483273"
+        target="_blank"
+        rel="noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white w-14 h-14 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 flex items-center justify-center border border-[#34e073] group"
+        aria-label="Contactar por WhatsApp"
+        id="whatsapp-floating-button"
+      >
+        <div className="relative w-8 h-8 flex items-center justify-center">
+          <MessageCircle className="w-8 h-8 text-white fill-white" />
+          <Phone className="w-4 h-4 text-[#25D366] fill-[#25D366] absolute" />
+        </div>
+        <span className="absolute right-16 bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-xl border border-slate-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+          ¿En qué podemos ayudarte?
+        </span>
+      </a>
 
     </div>
   );

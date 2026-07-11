@@ -35,6 +35,10 @@ const FAQ_ITEMS: FAQItem[] = [
   {
     question: '¿Dónde estamos ubicados?',
     answer: 'Vía Atahualpa pasando el GAD Municipal.'
+  },
+  {
+    question: '¿Qué tipo de mantenimiento hacen?',
+    answer: 'Preventivo y correctivo.'
   }
 ];
 
