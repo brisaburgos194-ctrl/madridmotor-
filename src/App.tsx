@@ -45,13 +45,6 @@ const TESTIMONIALS: TestimonialItem[] = [
     author: 'Andrés T.',
     role: 'Gerente Técnico, empresa minera de mediana escala',
     fleetSize: 'Flota mixta'
-  },
-  {
-    id: 't5',
-    quote: 'El bono de asesoría técnica fue lo que más nos sorprendió. Nos dieron orientación concreta a nuestros operadores sobre hábitos de uso que estaban acelerando el desgaste de los equipos. Cambios simples que nunca nadie nos había explicado. Desde entonces, los mismos operadores cuidan más las máquinas porque entienden por qué importa.',
-    author: 'Mónica R.',
-    role: 'Directora Administrativa, empresa de alquiler de maquinaria pesada',
-    fleetSize: 'Flota de alquiler'
   }
 ];
 
@@ -142,7 +135,7 @@ export default function App() {
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-xs font-bold text-indigo-450 uppercase tracking-widest animate-pulse">
                 <ShieldCheck className="w-3.5 h-3.5" />
-                Mantenimiento de Precisión
+                Mantenimiento Preventivo y Correctivo
               </div>
               
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.1] font-sans">
@@ -222,138 +215,31 @@ export default function App() {
         </div>
       </section>
 
-      {/* SECTION 2: Introducción — El Problema (Light Background - Soft Off-White/Grey) */}
-      <section id="el-problema" className="py-20 md:py-28 bg-slate-50 text-slate-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="text-xs font-black text-indigo-600 uppercase tracking-widest">Escenario Crítico</span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 tracking-tight mt-2 leading-tight">
-              Usted lo sabe mejor que nadie.
-            </h2>
-          </div>
-
-          <div className="space-y-6 text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed font-medium">
-            <p className="font-semibold text-slate-950 text-base sm:text-lg md:text-xl border-l-4 border-indigo-500 pl-4">
-              Son las 6:15 de la mañana. El turno arranca en 45 minutos. Y entonces suena el teléfono.
-            </p>
-            
-            <p className="italic bg-slate-100 border border-slate-200/80 rounded-xl p-4 font-bold text-slate-900 text-center text-lg shadow-sm">
-              "Jefe, el equipo no enciende."
-            </p>
-
-            <p>
-              En ese momento, no solo se detiene una máquina. Se detiene toda una cadena: operarios parados cobrando hora, clientes esperando, contratos en riesgo, presupuestos destruidos. Y usted, tratando de conseguir un técnico de emergencia que cobra el doble porque es urgente, buscando repuestos que no tiene en stock, explicándole a la gerencia por qué el proyecto se retrasa otra vez.
-            </p>
-
-            <p>
-              Este escenario no es raro. Es el pan de cada día en cientos de empresas del sector.
-            </p>
-
-            <p className="font-bold text-slate-950 text-base sm:text-lg">
-              Y lo más frustrante de todo es que, en la mayoría de los casos, <span className="underline decoration-indigo-500 decoration-4">esa falla era completamente evitable.</span>
-            </p>
-
-            <p>
-              La realidad es brutal: la maquinaria pesada mal mantenida no solo falla más, falla en el peor momento posible. Y cada falla no programada cuesta entre <strong className="text-slate-950">3 y 8 veces más</strong> que un mantenimiento preventivo bien ejecutado. No es opinión. Es matemática pura.
-            </p>
-
-            <div className="bg-indigo-500/10 border border-indigo-500/30 rounded-2xl p-6 my-8">
-              <h4 className="font-black text-slate-950 text-base uppercase tracking-wider mb-3">
-                ¿Por qué el mantenimiento tradicional se convierte en un laberinto?
-              </h4>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-800 font-semibold">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 flex-shrink-0" />
-                  <span>Técnicos sin especialización real.</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 flex-shrink-0" />
-                  <span>Talleres sin equipos de diagnóstico electrónico.</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 flex-shrink-0" />
-                  <span>Repuestos genéricos que fallan prematuramente.</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 flex-shrink-0" />
-                  <span>Presupuestos inflados, tardíos y sin respaldo técnico.</span>
-                </li>
-              </ul>
+      {/* RIBBON: Especialidades de Mantenimiento (Preventivo y Correctivo) */}
+      <section className="bg-slate-900 border-t border-b border-indigo-500/10 py-6 text-white relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-3">
+              <span className="p-2 bg-indigo-500/10 rounded-lg border border-indigo-500/20 text-indigo-400">
+                <Wrench className="w-5 h-5 stroke-[2]" />
+              </span>
+              <div>
+                <span className="text-[10px] uppercase font-black text-slate-450 tracking-wider">Especialistas Certificados</span>
+                <h3 className="text-sm sm:text-base font-extrabold text-white">Mantenimiento de Maquinaria Pesada</h3>
+              </div>
             </div>
-
-            <p>
-              Al final del año, cuando revisa los números, la pregunta es siempre la misma: <span className="italic font-bold">¿Por qué seguimos gastando tanto en mantenimiento si las máquinas siguen fallando?</span>
-            </p>
-
-            <p className="text-slate-950 font-extrabold text-base sm:text-lg text-center py-4 bg-slate-100/50 rounded-xl border border-slate-200">
-              Porque no es mantenimiento lo que ha tenido hasta ahora. Es <span className="text-red-600">reparación reactiva</span> disfrazada de mantenimiento.
-            </p>
-
-            <p className="text-center font-black text-indigo-600 text-lg sm:text-xl pt-4">
-              Eso termina hoy.
-            </p>
-          </div>
-          
-          <div className="mt-12 text-center">
-            <button 
-              onClick={scrollToForm}
-              className="inline-flex items-center gap-2.5 bg-slate-900 hover:bg-slate-800 active:bg-slate-950 text-indigo-400 hover:text-indigo-300 font-bold py-3.5 px-8 rounded-lg shadow-md transition-all cursor-pointer"
-            >
-              <span>Cortar el ciclo de fallas ahora</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 3: Historia y Conexión Emocional (Dark Background - Charcoal/Steel Gray) */}
-      <section className="py-20 md:py-28 bg-slate-900 border-t border-slate-800 text-slate-100 relative">
-        <div className="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none" />
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12">
-            <span className="text-xs font-black text-indigo-400 uppercase tracking-widest">Caso de Estudio</span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight mt-2">
-              La Historia de Rodrigo
-            </h2>
-            <div className="h-1 w-16 bg-indigo-500 mx-auto mt-4" />
-          </div>
-
-          <div className="space-y-6 text-sm sm:text-base leading-relaxed text-slate-300">
-            <p>
-              Permítame contarle la historia de Rodrigo.
-            </p>
             
-            <p>
-              Rodrigo lleva <strong className="text-white">14 años</strong> como jefe de mantenimiento en una empresa de movimiento de tierras en la región andina. Hombre de campo, conoce sus máquinas, las ha visto nacer y ha visto algunas morir antes de tiempo.
-            </p>
-
-            <p>
-              Durante años, Rodrigo hizo lo que podía con lo que tenía: un equipo de mecánicos internos con buena voluntad pero formación desigual, proveedores de repuestos que a veces cumplían y a veces no, y un presupuesto de mantenimiento que siempre era el primero en recortarse cuando los números apretaban.
-            </p>
-
-            <p className="text-white font-bold text-base border-l-2 border-indigo-500 pl-4 py-1 italic">
-              El punto de quiebre llegó un martes de octubre.
-            </p>
-
-            <p>
-              Tres excavadoras fuera de servicio al mismo tiempo. Una por falla hidráulica. Una por sobrecalentamiento del motor. Una por un problema eléctrico intermitente que nadie había podido diagnosticar bien en tres meses. La empresa tenía un contrato de obra con fecha de entrega inamovible. Las penalidades por retraso eran del 2% del valor total del contrato por cada semana de demora.
-            </p>
-
-            <p>
-              Rodrigo pasó 72 horas sin dormir bien, coordinando técnicos de emergencia, justificando ante la dirección, negociando con el cliente. Al final, sacaron el proyecto adelante, pero el costo de esas tres semanas de caos fue devastador: técnicos de emergencia, repuestos express con flete aéreo, horas extra del personal, penalidades parciales negociadas. Todo junto sumó más que los seis meses anteriores de "mantenimiento."
-            </p>
-
-            <p>
-              Lo peor no fue el dinero. Lo peor fue que Rodrigo sabía, en el fondo, que lo había visto venir. Las señales estaban ahí. Nadie las había leído a tiempo.
-            </p>
-
-            <p className="bg-slate-950/70 border border-slate-800 rounded-2xl p-6 italic text-center text-slate-200">
-              "Esa historia tiene miles de versiones distintas en cientos de empresas del sector. Quizás usted ya está viviendo la suya. Quizás ya tuvo su 'martes de octubre'. O quizás, si sigue por el mismo camino, está a punto de tenerlo."
-            </p>
-
-            <h4 className="text-center font-extrabold text-white text-base sm:text-lg pt-4">
-              La buena noticia es que existe una forma diferente de hacer las cosas.
-            </h4>
+            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+              <div className="flex items-center gap-2.5 bg-slate-950/50 px-4 py-2.5 rounded-xl border border-slate-800">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block animate-pulse" />
+                <span className="text-xs sm:text-sm font-black uppercase tracking-wider text-slate-200">Trabajo Preventivo</span>
+              </div>
+              <span className="hidden sm:inline text-slate-700 font-bold">&</span>
+              <div className="flex items-center gap-2.5 bg-slate-950/50 px-4 py-2.5 rounded-xl border border-slate-800">
+                <span className="w-2.5 h-2.5 rounded-full bg-indigo-500 inline-block" />
+                <span className="text-xs sm:text-sm font-black uppercase tracking-wider text-slate-200">Trabajo Correctivo</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
